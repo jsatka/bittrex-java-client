@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
  */
 public class MarketHistoryEntry {
 
+    private String uuid;
     private Long id;
     private LocalDateTime timeStamp;
     private BigDecimal quantity;
@@ -15,6 +16,14 @@ public class MarketHistoryEntry {
     private BigDecimal total;
     private String fillType;
     private String orderType;
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
 
     public Long getId() {
         return id;

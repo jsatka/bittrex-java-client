@@ -1,7 +1,7 @@
 package de.elbatya.cryptocoins.bittrexclient.api.model.publicapi;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 /**
  * @author contact@elbatya.de
@@ -10,7 +10,7 @@ public class MarketHistoryEntry {
 
     private String uuid;
     private Long id;
-    private LocalDateTime timeStamp;
+    private Instant timestamp;
     private BigDecimal quantity;
     private BigDecimal price;
     private BigDecimal total;
@@ -33,12 +33,12 @@ public class MarketHistoryEntry {
         this.id = id;
     }
 
-    public LocalDateTime getTimeStamp() {
-        return timeStamp;
+    public Instant getTimestamp() {
+        return timestamp;
     }
 
-    public void setTimeStamp(LocalDateTime timeStamp) {
-        this.timeStamp = timeStamp;
+    public void setTimestamp(String timestampString) {
+        this.timestamp = Instant.parse(timestampString+"Z");
     }
 
     public BigDecimal getQuantity() {
